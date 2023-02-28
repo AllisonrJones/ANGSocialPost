@@ -1,0 +1,12 @@
+<h2>Publish Thoughts:</h2>
+
+
+<app-single-post *ngFor="let p of Posts" [DisplayThought]="p"></app-single-post>
+<app-post-form (UserPost)="PublishThought()"></app-post-form>
+<p>Subject:</p>
+<input type="text" [(ngModel)]="newPost.title"/>
+
+<p>Thought:</p>
+<input type="text" [(ngModel)]="newPost.thought"/>
+
+<button (click)="PublishThought()">Publish</button>
